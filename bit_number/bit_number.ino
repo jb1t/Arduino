@@ -1,7 +1,7 @@
 int ledPins[] = {2,3,4,5};
 int numberOfPins = sizeof(ledPins)/sizeof(int);
 
-int on_delay = 500;
+int on_delay = 1000;
 
 void setup() {                
   for(int i=0; i < numberOfPins; i++)
@@ -12,7 +12,7 @@ void setup() {
 
 void loop() {
   
-  for(int i=0; i<10; i++)
+  for(int i=0; i<pow(2,numberOfPins+1); i++)
   {  
     displayNumber(i);
     resetPins();
