@@ -1,0 +1,1 @@
+This is a simple project that just randomly lights up an led that you have defined in the ledPins array.

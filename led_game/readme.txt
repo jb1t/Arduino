@@ -1,3 +1,3 @@
-This project is a variation of my first project on the Arduino
+The purpose of this project is to demonstrate lighting of LEDs and using a Tach switch.
 
-The basics of the simple sketch is to be a binary adder... hook up your leds and resistors and just initialize the ledPins array. The hook up your potentiometer to read in the analog value and use that for your delay. Now you have a bit counter that speeds up/down when you turn the potentiometer.
+The simple tach switch is the button you'll use in the game for input. You are supposed to push the button when it gets to the last light in the series. When you press the button whatever the current LED is will blink. If you pressed on the correct light you'll increment your score. If you press the button on the wrong LED you lose a life. You only have 3 lives before the game is over and reset. If you have serial port attached you'll the score output to the screen and what the high score ever time the game is reset.
