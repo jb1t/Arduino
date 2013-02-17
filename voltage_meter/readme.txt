@@ -1,0 +1,1 @@
+this project will show you how to build a voltage meter. It will use a voltage divider circuit using a potentiometer and a resistor. output to the serial monitor
