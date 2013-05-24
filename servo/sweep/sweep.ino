@@ -1,28 +1,33 @@
 #include <Servo.h> 
 #include "pitches.h"
 
-Servo myservo;  
+Servo leftServo;  
+Servo rightServo;  
 const int buttonPin = 4;
 const int ledPin = 2;
 const int buzzerPin = 3;
-const int servoPin = 9;
+const int leftServoPin = 9;
+const int rightServoPin = 10;
 
-unsigned long lastExecution = 4500000; // 1.25hrs 
+unsigned long lastExecution = 0;
 
 int maxRotationSpeedClockwise = 0;
+int maxRotationSpeedCounterClockwise = 180;
 int stopRotation = 90;
-unsigned long rotationDelayMilliseconds = 1500; // 2000 milliseconds (i.e. 2 seconds)
-unsigned long pauseInterval = 43200000;// (i.e. 12 hours)
+unsigned long rotationDelayMilliseconds = 1500; // (i.e. 1.5 seconds)
+unsigned long pauseInterval = 43080000;// (i.e. 11 hours 58 minutes - noticed a constant 2 minute drift)
 unsigned long ledFlashDelay = 100;
 unsigned long loopDelay = 10;
  
 void setup() 
 { 
-  Serial.begin(9600);
+  //Serial.begin(9600);
   pinMode(buttonPin, INPUT);
   pinMode(ledPin, OUTPUT);
-  myservo.attach(servoPin);  // attaches the servo on pin 9 to the servo object 
-  myservo.write(stopRotation);
+  leftServo.attach(leftServoPin);  // attaches the servo on pin 9 to the servo object 
+  rightServo.attach(rightServoPin);  // attaches the servo on pin 10 to the servo object 
+  leftServo.write(stopRotation);
+  rightServo.write(stopRotation);
 } 
   
 void loop() 
@@ -35,19 +40,20 @@ void loop()
   }
   else
   {
-    unsigned long timeLeft = lastExecution + pauseInterval - millis();
-    Serial.print("timeLeft=");
-    Serial.println(timeLeft);
-   delay(loopDelay); 
+    //unsigned long timeLeft = lastExecution + pauseInterval - millis();
+    //Serial.print("timeLeft=");
+    //Serial.println(timeLeft);
   }
 }
 
 void RotateServosAndThenStop()
 {
   digitalWrite(ledPin, HIGH);
-  myservo.write(maxRotationSpeedClockwise);
+  leftServo.write(maxRotationSpeedClockwise);
+  rightServo.write(maxRotationSpeedCounterClockwise);
   delay(rotationDelayMilliseconds);
-  myservo.write(stopRotation);
+  leftServo.write(stopRotation);
+  rightServo.write(stopRotation);
   digitalWrite(ledPin, LOW);
 }
 
