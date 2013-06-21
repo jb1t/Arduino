@@ -88,8 +88,8 @@ boolean IsButtonPressed()
   }
 }
 
-int alarmNotes[] = {NOTE_C6, NOTE_C6, NOTE_G6, NOTE_G6, NOTE_A6, NOTE_A6, NOTE_G6, NOTE_F6, NOTE_F6, NOTE_E6, NOTE_E6, NOTE_D6, NOTE_D6, NOTE_C6}; //ccggaagffeeddc
-int alarmNotesDuration[] = {8,8,8,8,8,8,4,8,8,8,8,8,8,4};
+int alarmNotes[] = {NOTE_A6, NOTE_GS6, NOTE_FS6, NOTE_E6, NOTE_A6, NOTE_GS6, NOTE_FS6, NOTE_E6, NOTE_A6, NOTE_GS6, NOTE_A6, NOTE_AS6, NOTE_B6, NOTE_GS6, NOTE_FS6, NOTE_E6, NOTE_B6, NOTE_GS6, NOTE_FS6, NOTE_E6, NOTE_B6, NOTE_GS6, NOTE_FS6, NOTE_E6, NOTE_B6, NOTE_AS6, NOTE_B6, NOTE_C5, NOTE_CS6, NOTE_GS6, NOTE_FS6, NOTE_E6}; //ccggaagffeeddc
+int alarmNotesDuration[] = {8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8};
 
 void playAlarmMusic()
 {
