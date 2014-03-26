@@ -15,7 +15,7 @@ int maxRotationSpeedClockwise = 0;
 int maxRotationSpeedCounterClockwise = 180;
 int stopRotation = 90;
 unsigned long rotationDelayMilliseconds = 1500; // (i.e. 1.5 seconds)
-unsigned long pauseInterval = 43080000;// (i.e. 11 hours 58 minutes - noticed a constant 2 minute drift)
+unsigned long pauseInterval = 86160000;// (i.e. 23 hours 56 minutes - noticed a constant 4 minute drift for every 24 hrs)
 unsigned long ledFlashDelay = 100;
 unsigned long loopDelay = 10;
  
