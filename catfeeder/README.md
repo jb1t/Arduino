@@ -4,7 +4,7 @@ It has been approximately 5 years now since I created an automated cat food feed
 
 Here is a [link](https://1drv.ms/v/s!Apbi_Kvsna1rjCgFPiBUqhv0UFdJ) to view some photos and videos of the project. 
 
-![Cat Feeder](https://1drv.ms/i/s!Apbi_Kvsna1ri3DmJQyvZiAckA4b)
+![Cat Feeder](http://thefullstacknerd.com/wp-content/uploads/2018/01/cat_feeder.jpg)
 
 I added the Meow Mix jingle to play before it feeds the cats and true to [Pavlov's Law](https://www.simplypsychology.org/pavlov.html) the cats come running when they hear the jingle play.
 
